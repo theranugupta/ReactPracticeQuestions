@@ -18,7 +18,7 @@ export default function TotalCartValue() {
     if (item.price === null || typeof item.price !== 'number') {
       return;
     }
-    return sum + item.price;
+    return sum + (item.price * item.quantity);
   }, 0);
   console.log(totalCartPrice);
 }
